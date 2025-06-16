@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nikitha's Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f9fc;
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    h1#typing {
+      font-size: 2em;
+      color: #4b0082;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="typing"></h1>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="100">
+  <h2>🙋‍♀️ About Me</h2>
+  <p>
+    I'm Nikitha Gigen, a Computer Engineering student passionate about programming, web development, and building meaningful projects.
+    I’m currently learning HTML, CSS, Python, and Java, and I enjoy solving logic problems and exploring new technologies!
+  </p>
+  </div>
+ 
+    <h2>📷 My Favorite Picture</h2>
+    <img src="your-image.jpg" alt="Favorite Picture">
+  </div>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="100">
+    <h2>🔗 My Favorite Site</h2>
+    <p>Visit <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> to learn more about coding!</p>
+  </div>
+  <div class="section" data-aos="fade-up" data-aos-delay="150">
+  <h2>🛠️ Skills</h2>
+  <ul>
+    <li>🌐 HTML & CSS – Beginner</li>
+    <li>💻 Python – Basics, File Handling, OOP</li>
+    <li>☕ Java – Core Concepts, OOP, Multithreading</li>
+    <li>🎨 UI Tools – Tkinter (Python), Figma (optional)</li>
+  </ul>
+ </div> 
+ <div class="section">
+  <h2>📚 Learning Goals</h2>
+  <ul>
+    <li>✅ Mastering Python GUI with Tkinter</li>
+    <li>✅ Working with APIs in Python</li>
+    <li>✅ Improving Java OOP and multithreading</li>
+    <li>✅ Building full web apps with Flask</li>
+  </ul>
+</div>
+
+  <div class="section" data-aos="fade-up" data-aos-delay="300">
+  <h2>📂 Projects (Coming Soon!)</h2>
+  <ul>
+    <li>💻 <strong>Personal Portfolio Website</strong> – (✔️ Completed!)</li>
+    <li>📚 <strong>Student Mark Tracker</strong> – A GUI tool to manage and display student marks</li>
+    <li>🧠 <strong>Whispr</strong> – A mental health support app with anonymous letter writing</li>
+    <li>🌦️ <strong>Weather Info Page</strong> – Shows weather using live API (planned)</li>
+    <li>📝 <strong>To-Do List</strong> – Simple web app to manage daily tasks (coming soon)</li>
+  </ul>
+  </div>
+
+    <h2>📘 Contact Me</h2>
+    <p>Email: <a href="mailto:nikithagigen@gmail.com">nikithagigen@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/nikitha-gigen" target="_blank">linkedin.com/in/nikitha-gigen</a></p>
+    <button onclick="alert('Thank you for checking my portfolio!')">Click Me</button>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const text = "Hi, I’m Nikitha Gigen";
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    window.onload = type;
+  </script>
+
+</body>
+</html>
